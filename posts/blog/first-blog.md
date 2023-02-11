@@ -2,6 +2,7 @@
 title: "ブログ始めました"
 date: "2023-01-30"
 description: "最初のテスト。"
+image: "images/Hello.jpg"
 ---
 
 ## 技術スタック
