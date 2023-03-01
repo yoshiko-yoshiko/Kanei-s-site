@@ -2,6 +2,12 @@ import fs from "fs";
 import matter from "gray-matter";
 import MarkdownIt from "markdown-it";
 import Image from "next/image";
+import { frontMatter } from "@/types/types";
+
+interface Props {
+  frontMatter: frontMatter;
+  content: string;
+}
 
 // 記事内容の取得
 export const getStaticProps = async ({ params }) => {
@@ -28,7 +34,7 @@ export const getStaticPaths = async () => {
   };
 };
 
-const Post = ({ frontMatter, content }) => {
+const Post = ({ frontMatter, content }: Props) => {
   return (
     <div className="prose prose-lg max-w-none">
       <div className="mt-5">
