@@ -9,8 +9,14 @@ interface Props {
   content: string;
 }
 
+interface Params {
+  params: {
+    slug: string;
+  };
+}
+
 // 記事内容の取得
-export const getStaticProps = async ({ params }) => {
+export const getStaticProps = async ({ params }: Params) => {
   const files = await fs.readFileSync(`posts/blog/${params.slug}.md`, "utf-8");
   const { data, content } = matter(files);
   return { props: { frontMatter: data, content } };

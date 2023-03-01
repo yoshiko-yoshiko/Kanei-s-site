@@ -16,3 +16,5 @@ export type postcard = {
   title: string;
   date: string;
 };
+
+export type params = {};
