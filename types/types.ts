@@ -1,4 +1,5 @@
 export type frontMatter = {
+  slug: string;
   frontMatter: any;
   title: string;
   date: string;
