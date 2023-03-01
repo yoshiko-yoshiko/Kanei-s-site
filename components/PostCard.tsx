@@ -1,8 +1,13 @@
 import Link from "next/link";
 import { frontMatter } from "@/types/types";
 import Image from "next/image";
+
+interface Props {
+  post: frontMatter;
+}
+
 // add Image
-const PostCard = ({ post }) => {
+const PostCard = ({ post }: Props) => {
   return (
     <Link href={`/post/${post.slug}`}>
       <div className="border rounded-lg">

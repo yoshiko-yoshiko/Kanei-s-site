@@ -1,4 +1,5 @@
 export type frontMatter = {
+  frontMatter: any;
   title: string;
   date: string;
   description: string;
@@ -7,4 +8,10 @@ export type frontMatter = {
 
 export type posts = {
   posts: string;
+};
+
+export type postcard = {
+  image: string;
+  title: string;
+  date: string;
 };
