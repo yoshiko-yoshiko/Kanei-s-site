@@ -1,7 +1,14 @@
 import PostCard from "@/components/PostCard";
 import fs from "fs";
 import matter from "gray-matter";
-import { posts } from "@/types/types";
+import { frontMatter } from "@/types/types";
+
+interface Props {
+  posts: {
+    frontMatter: frontMatter;
+    slug: string;
+  }[];
+}
 
 export const getStaticProps = () => {
   const files = fs.readdirSync("posts/blog");
@@ -25,7 +32,7 @@ export const getStaticProps = () => {
   };
 };
 
-export default function Home({ posts }) {
+export default function Home({ posts }: Props) {
   return (
     <div className="my-8">
       <div className="grid grid-cols-3 gap-4">

@@ -7,7 +7,11 @@ interface Props {
 }
 
 // add Image
-const PostCard = ({ post }: Props) => {
+const PostCard = ({
+  post,
+}: {
+  post: { frontMatter: frontMatter; slug: string };
+}) => {
   return (
     <Link href={`/post/${post.slug}`}>
       <div className="border rounded-lg">
