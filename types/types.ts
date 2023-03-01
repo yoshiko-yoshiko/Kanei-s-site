@@ -5,4 +5,6 @@ export type frontMatter = {
   image: string;
 };
 
-export type PostCard = {};
+export type posts = {
+  posts: string;
+};
